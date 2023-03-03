@@ -5,26 +5,66 @@
     box-sizing: border-box;
 }
 
+:root{
+    --text-primary: #FFF;
+    --text-secundary: #000;
+    --font-heading: 'Poppins';
+    --font-default: 'Monteserrat';
+}
+
 html{
     font-size: 62.5%;
 }
 
+body{
+    font-family: var(--font-default);
+    color: var(--text-primary);
+}
+
 header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
     background-image: url("../images/hero.png");
     background-size: cover;
     height: 100vh;
     padding: 60rem 9.0rem;
+
 }
 
 h1{
     font-size: 5rem;
     font-weight: 900;
-    color: #FFF;
-    font-family: 'Poppins';
+    font-family: var(--font-heading);
 }
 
 span{
     font-size: 4rem;
-    color: #FFF;
+}
 
+.button{
+    background: linear-gradient(90deg,#ED213A, #93291E);
+    padding: 1rem 3rem;
+    border-radius: 7px;
+    color: #FFF;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+img.avatar{
+    border-radius: 50%;
+}
+
+.section-presentation{
+    display: flex;
+    color: var(--text-secundary);
+}
+
+.section-presentation div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 2rem;
 }
