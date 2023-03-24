@@ -76,6 +76,7 @@ span {
     color: #FFF;
     font-size: 2rem;
     text-decoration: none;
+    text-align: center;
 }
 
 .button:hover{
