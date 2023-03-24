@@ -19,6 +19,7 @@ html{
 body{
     font-family: var(--font-default);
     color: var(--text-primary);
+    font-size: 2rem;
 }
 
 header{
@@ -54,14 +55,17 @@ header::before{
     }
 }
 
-h1{
-    font-size: 5rem;
+h1, h2, h3, h4 {
     font-weight: 900;
-    font-family: var(--font-heading);
-    padding-top: 55rem;
+    font-family: var(--font-heading)
 }
 
-span{
+h1{font-size: 5rem;}
+h2{font-size: 4rem;}
+h3{font-size: 3rem;}
+h4{font-size: 2rem;}
+p {font-size: 1.8rem;}
+span {
     font-size: 4rem;
 }
 
@@ -87,6 +91,7 @@ img.avatar{
 .section-presentation{
     display: flex;
     color: var(--text-secundary);
+    gap: 3rem;
 }
 
 .section-presentation div{
@@ -127,9 +132,53 @@ img.avatar{
     bottom: 0;
     opacity: 0;
     transition: opacity .5s, bottom .5s;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.card-info h4{
+    color: #c36eff;
 }
 
 #section-projects li:hover .card-info{
     opacity: 1;
     bottom: 20%;
+}
+
+#section-projects li:hover .card-image{
+    opacity: 1;
+}
+
+#section-budged{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1584949091598-c31daaaa4aa9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    background-size: cover;
+}
+
+#section-budged form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    background-color: #8C8C8C99;
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+    width: 80%;
+    padding: 2rem;    
+}
+
+#section-budged form h4{
+    position: absolute;
+    top: -15%;
+    background-color: #6A3093;
+    padding: .3rem 2rem;  
+    border-radius: 5px;  
+}
+
+#section-budged form output{
+    grid-column: 2;
 }
